@@ -22,4 +22,7 @@
     <ProjectReference Include="..\Onion.Repo\Onion.Repo.csproj" />
     <ProjectReference Include="..\Onion.Data\Onion.Data.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Onion.Repo\onionData.db" CopyToPublishDirectory="Always" CopyToOutputDirectory="Always" />
+  </ItemGroup>
 </Project>
