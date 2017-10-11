@@ -38,7 +38,7 @@ Example ConnectionStrings section:
       "onionAuthConnection": "DataSource=onionAuth.db"
     },
 
-1. Open a command prompt in the `Onion.Web` directory
+2. Open a command prompt in the `Onion.Web` directory
 
 Issue the following commands to set up the databases:
 
@@ -46,7 +46,7 @@ Issue the following commands to set up the databases:
     dotnet ef database update -c DwContext -p ../Onion.Repo/Onion.Repo.csproj -s Onion.Web.csproj
     dotnet ef database update -c AppIdentityDbContext -p ../Onion.Repo/Onion.Repo.csproj -s Onion.Web.csproj
 
-1. Run the application and seed the database
+3. Run the application and seed the database
 
 Issue the following command from the `Onion.Web` directory:
 
