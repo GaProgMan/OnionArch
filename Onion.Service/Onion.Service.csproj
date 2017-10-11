@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Onion.Repo\Onion.Repo.csproj" />
+    <ProjectReference Include="..\Onion.Data\Onion.Data.csproj" />
+  </ItemGroup>
+</Project>
