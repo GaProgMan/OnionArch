@@ -4,17 +4,18 @@ namespace Onion.Repo
 {
     public class DatabaseConfiguration : ConfigurationBase
     {
-        private string DataDbConnectionKey = "onionDataConnection";
-        private string AuthDbConnectionKey = "onionAuthConnection";
-        
+        private string DataConnectionKey = "onionDataConnection";
+
+        private string AuthConnectionKey = "onionAuthConnection";
+
         public string GetDataConnectionString()
         {
-            return GetConfiguration().GetConnectionString(DataDbConnectionKey);
+            return GetConfiguration().GetConnectionString(DataConnectionKey);
         }
-
+        
         public string GetAuthConnectionString()
         {
-            return GetConfiguration().GetConnectionString(AuthDbConnectionKey);
+            return GetConfiguration().GetConnectionString(AuthConnectionKey);
         }
     }
 }

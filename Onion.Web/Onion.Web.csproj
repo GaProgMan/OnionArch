@@ -1,14 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <UserSecretsId>aspnet-Onion.Web-D4B84E7B-374E-4399-B2F3-0AFD8D82E344</UserSecretsId>
+    <UserSecretsId>aspnet-Onion.Web-727D117F-8A93-4C18-BEAC-B62DEA978353</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ClacksMiddlware" Version="2.0.0" />
+    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" PrivateAssets="All" />
-    <PackageReference Include="OwaspHeaders.Core" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" />
@@ -18,11 +19,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Onion.Service\Onion.Service.csproj" />
-    <ProjectReference Include="..\Onion.Repo\Onion.Repo.csproj" />
     <ProjectReference Include="..\Onion.Data\Onion.Data.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Onion.Repo\onionData.db" CopyToPublishDirectory="Always" CopyToOutputDirectory="Always" />
+    <ProjectReference Include="..\Onion.Repo\Onion.Repo.csproj" />
+    <ProjectReference Include="..\Onion.Services\Onion.Services.csproj" />
+    <ProjectReference Include="..\Onion.Service\Onion.Service.csproj" />
   </ItemGroup>
 </Project>

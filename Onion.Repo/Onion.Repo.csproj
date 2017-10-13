@@ -17,9 +17,9 @@
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Onion.Web\appsettings.json" CopyToPublishDirectory="Always" CopyToOutputDirectory="Always" />
+    <ProjectReference Include="..\Onion.Data\Onion.Data.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\Migrations\" />
+    <None Include="..\Onion.Web\appsettings.json" CopyToPublishDirectory="Always" CopyToOutputDirectory="Always" />
   </ItemGroup>
 </Project>

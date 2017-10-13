@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Onion.Data.Entities;
-using Onion.Repo.Interfaces;
 
 namespace Onion.Repo.Data
 {
-    public class DwRepository<T> : IRepository<T> where T : BaseAuditClass  
+    public class DataRepository<T> : IRepository<T> where T : BaseAuditClass  
     {  
-        private readonly DwContext context;  
+        private readonly DataContext context;  
         private DbSet<T> entities;  
         string errorMessage = string.Empty;  
   
-        public DwRepository(DwContext context)  
+        public DataRepository(DataContext context)  
         {  
             this.context = context;  
             entities = context.Set<T>();  
@@ -23,7 +22,7 @@ namespace Onion.Repo.Data
             return entities.AsEnumerable();  
         }  
   
-        public T Get(long id)  
+        public T Get(int id)  
         {  
             return entities.SingleOrDefault(s => s.Id == id);  
         }  

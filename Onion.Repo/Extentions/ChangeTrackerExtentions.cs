@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Onion.Data.Entities;
 
-namespace Onion.Repo.Extensions
+namespace Onion.Repo.Extentions
 {
-    public static class ChangeTrackerExtentions
+    public static class ChangeTrackerExtensions
     {
         public static void ApplyAuditInformation(this ChangeTracker changeTracker)
         {

@@ -7,9 +7,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Onion.Repo.Identity;
-using Onion.Service.Interfaces;
-using Onion.Web.Extensions;
 using Onion.Web.Models.AccountViewModels;
+using Onion.Web.Services;
 
 namespace Onion.Web.Controllers
 {
@@ -223,9 +222,9 @@ namespace Onion.Web.Controllers
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-//                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-//                    var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme);
-//                    await _emailSender.SendEmailConfirmationAsync(model.Email, callbackUrl);
+                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme);
+                    await _emailSender.SendEmailConfirmationAsync(model.Email, callbackUrl);
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     _logger.LogInformation("User created a new account with password.");

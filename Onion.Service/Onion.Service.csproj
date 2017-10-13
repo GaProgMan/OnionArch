@@ -3,7 +3,7 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Onion.Repo\Onion.Repo.csproj" />
     <ProjectReference Include="..\Onion.Data\Onion.Data.csproj" />
+    <ProjectReference Include="..\Onion.Repo\Onion.Repo.csproj" />
   </ItemGroup>
 </Project>

@@ -8,16 +8,16 @@ namespace Onion.Repo.Helpers
 {
     public class DatabaseSeeder
     {
-        private readonly DwContext _dwContext;
+        private readonly DataContext _dataContext;
 
-        public DatabaseSeeder(DwContext dwContext)
+        public DatabaseSeeder(DataContext dataContext)
         {
-            _dwContext = dwContext;
+            _dataContext = dataContext;
         }
 
         public async Task<int> SeedBookEntries()
         {
-            _dwContext.Books.Add(
+            _dataContext.Books.Add(
                 new Book()
                 {
                     BookName = "The Colour of Magic",
@@ -28,39 +28,39 @@ namespace Onion.Repo.Helpers
                     BookCoverImageUrl = "http://wiki.lspace.org/mediawiki/images/c/c9/Cover_The_Colour_Of_Magic.jpg"
                 });
             // TODO implement method
-            return await _dwContext.SaveChangesAsync();
+            return await _dataContext.SaveChangesAsync();
         }
 
         public async Task<int> SeedSeriesEntries()
         {
-            _dwContext.Series.Add(new Series()
+            _dataContext.Series.Add(new Series()
             {
                 SeriesName = "Rincewind"
             });
             // TODO implement method
-            return await _dwContext.SaveChangesAsync();
+            return await _dataContext.SaveChangesAsync();
         }
 
         public async Task<int> SeedBookSeriesEntries()
         {
             var rincewindBooks =
-                _dwContext.Books.Where(book => book.BookName == "The Colour of Magic");
+                _dataContext.Books.Where(book => book.BookName == "The Colour of Magic");
 
-            var rincewindSeries = _dwContext.Series.FirstOrDefault(series => series.SeriesName == "Rincewind");
+            var rincewindSeries = _dataContext.Series.FirstOrDefault(series => series.SeriesName == "Rincewind");
 
             if (!rincewindBooks.Any() || rincewindSeries == null)
             {
                 throw new ArgumentException($"Unable to see {nameof(BookSeries)}");
             }
 
-            _dwContext.BookSeries.AddRange(rincewindBooks.Select(b => new BookSeries()
+            _dataContext.BookSeries.AddRange(rincewindBooks.Select(b => new BookSeries()
             {
                 BookId = b.Id,
                 SeriesId = rincewindSeries.Id
             }));
             
             // TODO implement method
-            return await _dwContext.SaveChangesAsync();
+            return await _dataContext.SaveChangesAsync();
         }
     }
 }

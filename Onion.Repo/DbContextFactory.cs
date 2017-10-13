@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Onion.Repo.Data;
-using Onion.Repo.Identity;
 
 namespace Onion.Repo
 {
@@ -14,18 +13,17 @@ namespace Onion.Repo
     /// Please see the following URL for more information:
     /// https://docs.microsoft.com/en-us/ef/core/miscellaneous/configuring-dbcontext#using-idbcontextfactorytcontext
     /// </remarks>
-    public class DbContextFactory : IDesignTimeDbContextFactory<DwContext>
+    public class DbContextFactory : IDesignTimeDbContextFactory<DataContext>
     {
         private static string DataConnectionString => new DatabaseConfiguration().GetDataConnectionString();
-        private static string AuthConnectionString => new DatabaseConfiguration().GetAuthConnectionString();
 
-        public DwContext CreateDbContext(string[] args)
+        public DataContext CreateDbContext(string[] args)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<DwContext>();
+            var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
 
             optionsBuilder.UseSqlite(DataConnectionString);
 
-            return new DwContext(optionsBuilder.Options);
+            return new DataContext(optionsBuilder.Options);
         }
     }
 }

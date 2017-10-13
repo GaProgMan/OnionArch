@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Onion.Data.Entities;
 
 namespace Onion.Data.Mapping
@@ -11,6 +12,7 @@ namespace Onion.Data.Mapping
             entityBuilder.HasMany(b => b.BookSeries)
                 .WithOne(bs => bs.Book)
                 .HasForeignKey(bs => bs.BookId);
+            entityBuilder.ToTable("Books");
         } 
     }
 }

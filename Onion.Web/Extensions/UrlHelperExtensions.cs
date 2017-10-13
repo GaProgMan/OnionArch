@@ -1,7 +1,6 @@
-using Microsoft.AspNetCore.Mvc;
 using Onion.Web.Controllers;
 
-namespace Onion.Web.Extensions
+namespace Microsoft.AspNetCore.Mvc
 {
     public static class UrlHelperExtensions
     {
