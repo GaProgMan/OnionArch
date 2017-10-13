@@ -9,9 +9,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Onion.Repo.Identity;
-using Onion.Service.Interfaces;
-using Onion.Web.Extensions;
 using Onion.Web.Models.ManageViewModels;
+using Onion.Web.Services;
 
 namespace Onion.Web.Controllers
 {
@@ -494,7 +493,7 @@ namespace Onion.Web.Controllers
         {
             return string.Format(
                 AuthenicatorUriFormat,
-                _urlEncoder.Encode("MvcApp"),
+                _urlEncoder.Encode("Onion.Web"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }

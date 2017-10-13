@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Onion.Data.Entities;
-using Onion.Repo.Interfaces;
+using Onion.Repo.Data;
 using Onion.Service.Interfaces;
 
 namespace Onion.Service

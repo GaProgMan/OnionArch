@@ -2,11 +2,11 @@
 using Onion.Repo.Data;
 using Onion.Repo.Helpers;
 
-namespace Onion.Repo.Extensions
+namespace Onion.Repo.Extentions
 {
     public static class DbContextExtensions
     {
-        public static int EnsureSeedData(this DwContext appContext)
+        public static int EnsureSeedData(this DataContext appContext)
         {
             var bookCount = default(int);
             var seriesCount = default(int);

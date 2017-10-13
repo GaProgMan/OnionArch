@@ -13,6 +13,6 @@ namespace Onion.Data.Entities
         public byte[] BookCoverImage { get; set; }
         public string BookCoverImageUrl { get; set; }
         
-        public virtual ICollection<BookSeries> BookSeries { get; set; } = new Collection<BookSeries>();
+        public virtual ICollection<BookSeries> BookSeries { get; } = new Collection<BookSeries>();
     }
 }

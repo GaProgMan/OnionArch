@@ -43,7 +43,7 @@ Example ConnectionStrings section:
 Issue the following commands to set up the databases:
 
     dotnet restore
-    dotnet ef database update -c DwContext -p ../Onion.Repo/Onion.Repo.csproj -s Onion.Web.csproj
+    dotnet ef database update -c DataContext -p ../Onion.Repo/Onion.Repo.csproj -s Onion.Web.csproj
     dotnet ef database update -c AppIdentityDbContext -p ../Onion.Repo/Onion.Repo.csproj -s Onion.Web.csproj
 
 3. Run the application and seed the database

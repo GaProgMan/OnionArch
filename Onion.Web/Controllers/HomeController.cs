@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Onion.Service.Interfaces;
 using Onion.Web.Models;
 
 namespace Onion.Web.Controllers
@@ -28,23 +27,7 @@ namespace Onion.Web.Controllers
 
         public IActionResult Error()
         {
-            return View(new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier});
-        }
-    }
-
-    public class BooksController : Controller
-    {
-        private readonly IBookService _bookService;
-
-        public BooksController(IBookService bookService)
-        {
-            _bookService = bookService;
-        }
-
-        public IActionResult GetAll()
-        {
-            var allBooks = _bookService.GetBooks();
-            return Json(allBooks);
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
