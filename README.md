@@ -43,6 +43,15 @@ Example ConnectionStrings section:
 Issue the following commands to set up the databases:
 
     dotnet restore
+
+Check for migrations in the `Onion.Repo.Identity` directory. If there isn't a directory labelled `Migrations`, then run the following (from the `Onion.Web`) directory to generate them:
+
+    dotnet ef migrations add CreateIdentitySchema -c AppIdentityDbContext -p ../Onion.Blog.Repo/Onion.Blog.Repo.csproj -s Onion.Blog.Web.csproj
+
+Similarly, check for migrations in the `Onion.Repo.Data` directory. If there isn't a directory labelled `Migrations`, then run the following (from the `Onion.Web`) directory to generate them:
+
+    dotnet ef migrations add InitialMigration -c DataContext -p ../Onion.Blog.Repo/Onion.Blog.Repo.csproj -s Onion.Blog.Web.csproj
+    
     dotnet ef database update -c DataContext -p ../Onion.Repo/Onion.Repo.csproj -s Onion.Web.csproj
     dotnet ef database update -c AppIdentityDbContext -p ../Onion.Repo/Onion.Repo.csproj -s Onion.Web.csproj
 
