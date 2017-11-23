@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Onion.Data.Entities;
-using Onion.Data.Mapping;
+using Onion.Repo.Data.Mapping;
 using Onion.Repo.Extentions;
 
 namespace Onion.Repo.Data

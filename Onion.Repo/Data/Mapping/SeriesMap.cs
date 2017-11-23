@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Onion.Data.Entities;
 
-namespace Onion.Data.Mapping
+namespace Onion.Repo.Data.Mapping
 {
     public class SeriesMap
     {
