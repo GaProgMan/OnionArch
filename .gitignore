@@ -258,3 +258,6 @@ paket-files/
 
 # Sqlite databases
 *.db
+
+.idea/
+.template-config/
