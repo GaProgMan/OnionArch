@@ -8,6 +8,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="JetBrains.Annotations" Version="11.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" PrivateAssets="All" />
   </ItemGroup>
@@ -21,7 +22,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Onion.Data\Onion.Data.csproj" />
     <ProjectReference Include="..\Onion.Repo\Onion.Repo.csproj" />
-    <ProjectReference Include="..\Onion.Services\Onion.Services.csproj" />
     <ProjectReference Include="..\Onion.Service\Onion.Service.csproj" />
   </ItemGroup>
 </Project>

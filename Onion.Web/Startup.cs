@@ -24,6 +24,8 @@ namespace Onion.Web
             services.AddTransientServices();
 
             services.AddMvc();
+
+            services.AddFeatureFolders();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

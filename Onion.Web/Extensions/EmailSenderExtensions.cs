@@ -1,7 +1,8 @@
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using Onion.Service.Interfaces;
 
-namespace Onion.Web.Services
+namespace Onion.Web.Extensions
 {
     public static class EmailSenderExtensions
     {
