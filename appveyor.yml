@@ -1,0 +1,24 @@
+image: Visual Studio 2017
+branches:
+  only:
+  - master
+init:
+  # Good practise, because Windows line endings are different from Unix/Linux ones
+  - cmd: git config --global core.autocrlf true
+install:
+  # Install repo specific stuff here
+build_script:
+  # Create a NuGet packge for uploading
+  - cmd: nuget pack OnionArch.nuspec
+after_build:
+  # For once the build has completed
+artifacts:
+ - path: '\*.nupkg'
+   name: NuGet-OwaspHeaders
+   type: Auto
+clone_depth: 1
+deploy:
+ provider: Environment
+ name: NuGet-OwaspHeaders
+on_finish :
+  # any cleanup in here
