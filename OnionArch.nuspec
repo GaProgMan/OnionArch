@@ -3,6 +3,7 @@
   <metadata>
     <id>OnionArch.Mvc</id>
     <version>0.0.1</version>
+    <iconUrl>https://raw.githubusercontent.com/GaProgMan/OnionArch/master/onionArch-nuget-logo.png</iconUrl>
     <description>
       ASP.NET Core MVC using the onion architecture and feature folders
     </description>
