@@ -17,6 +17,10 @@ OnionArch has a Code of Conduct which all contributors, maintainers and forkers 
 
 See [Code of Conduct.md](Code-of-Conduct.md) for details.
 
+## NuGet Package
+
+This project is now available as a [NuGet package](https://www.nuget.org/packages/OnionArch.Mvc)
+
 ## Running The Application
 
 1. Ensure that the `appsettings.json` file contains a valid `ConnectionStrings` section.
