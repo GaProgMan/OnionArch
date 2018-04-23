@@ -22,6 +22,7 @@ bld/
 [Oo]bj/
 [Ll]og/
 .vscode/
+*.nupkg
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -260,4 +261,3 @@ paket-files/
 *.db
 
 .idea/
-.template-config/
