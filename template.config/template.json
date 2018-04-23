@@ -1,0 +1,27 @@
+{
+    "author": "Jamie Taylor",
+    "classifications": ["Web", "MVC"],
+    "name": "Onion Architecture MVC",
+    "identity": "OnionArch.Mvc",
+    "shortName": "onionArch",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "Onion",
+    "preferNameDirectory": true,
+    "sources": [
+        {
+          "exclude": [
+            ".idea/**",
+            ".vscode/**",
+            "obj/**",
+            "bin/**",
+            ".template.config/**",
+            "*.nuspec",
+            "*.nupkg",
+            ".git/**"
+          ]
+        }
+      ]
+}
