@@ -11,6 +11,8 @@
     <summary>
       Creates a new ASP NET Core MVC application using the onion architecture and feature folders
     </summary>
+    <releaseNotes>https://raw.githubusercontent.com/GaProgMan/OnionArch/master/NuGetReadme.md</releaseNotes>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <authors>Jamie Taylor</authors>
     <copyright>Copyright © Jamie Taylor 2018</copyright>
     <licenseUrl>https://raw.githubusercontent.com/GaProgMan/OnionArch/master/LICENSE</licenseUrl>
