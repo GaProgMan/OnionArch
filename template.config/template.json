@@ -1,27 +1,47 @@
 {
-    "author": "Jamie Taylor",
-    "classifications": ["Web", "MVC"],
-    "name": "Onion Architecture MVC",
-    "identity": "OnionArch.Mvc",
-    "shortName": "onionArch",
-    "tags": {
-        "language": "C#",
-        "type": "project"
-    },
-    "sourceName": "Onion",
-    "preferNameDirectory": true,
-    "sources": [
-        {
-          "exclude": [
-            ".idea/**",
-            ".vscode/**",
-            "obj/**",
-            "bin/**",
-            ".template.config/**",
-            "*.nuspec",
-            "*.nupkg",
-            ".git/**"
-          ]
-        }
+  "author": "Jamie Taylor",
+  "classifications": [
+    "Web",
+    "MVC"
+  ],
+  "name": "Onion Architecture MVC",
+  "identity": "OnionArch.Mvc",
+  "shortName": "onionArch",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Onion",
+  "preferNameDirectory": true,
+  "sources": [
+    {
+      "exclude": [
+        ".idea/**",
+        ".vscode/**",
+        "obj/**",
+        "bin/**",
+        ".template.config/**",
+        "*.nuspec",
+        "*.nupkg",
+        "*.yml",
+        "*.png",
+        "*.svg",
+        ".git/**"
       ]
+    }
+  ],
+  "symbols": {
+    "enable-gnu-pratchett": {
+      "type": "parameter",
+      "dataType": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include and activate middleware which will include the X-GNU-Pratchett header in all requests"
+    },
+    "enable-secure-headers": {
+      "type": "parameter",
+      "dataType": "bool",
+      "defaultValue": "false",
+      "description": "Whether to include and activate middleware which will include a range of OWASP suggested security headers"
+    }
+  }
 }

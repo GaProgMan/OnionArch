@@ -2,6 +2,13 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+#if(enable-gnu-pratchett)
+using ClacksMiddleware;
+#endif
+#if(enable-secure-headers)
+using OwaspHeaders.Core.Enums;
+using OwaspHeaders.Core.Extensions;
+#endif
 
 namespace Onion.Web
 {
@@ -40,6 +47,13 @@ namespace Onion.Web
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+#if(enable-gnu-pratchett)
+            app.GnuTerryPratchett();
+#endif
+#if(enable-secure-headers)
+            app.UseSecureHeadersMiddleware(SecureHeadersMiddlewareExtensions.BuildDefaultConfiguration());
+#endif
 
             app.UseStaticFiles();
 
