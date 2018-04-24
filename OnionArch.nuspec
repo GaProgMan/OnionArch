@@ -3,13 +3,13 @@
   <metadata>
     <id>OnionArch.Mvc</id>
     <title>OnionArch.Mvc</title>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <iconUrl>https://raw.githubusercontent.com/GaProgMan/OnionArch/master/onionArch-nuget-logo.png</iconUrl>
     <description>
       ASP.NET Core MVC using the onion architecture and feature folders
     </description>
     <summary>
-      Creates a new ASP NET Core MVVC application using the onion architecture and feature folders
+      Creates a new ASP NET Core MVC application using the onion architecture and feature folders
     </summary>
     <authors>Jamie Taylor</authors>
     <copyright>Copyright © Jamie Taylor 2018</copyright>
@@ -24,5 +24,7 @@
     <file src="README.md" target="src" />
     <file src=".idea/**" exclude="*" />
     <file src=".git/**" exclude="*"/>
+    <file src="./**" exclude="*.png" />
+    <file src="./**" exclude="*.svg" />
   </files>
 </package>
