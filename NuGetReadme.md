@@ -1,5 +1,3 @@
-## Description
-
 OnionArch.Mvc is an ASP.NET Core project template which uses the onion architecture and domain driven design to scaffold an ASP.NET Core MVC application using feature folders.
 
 ## Installation
