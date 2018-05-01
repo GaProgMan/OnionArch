@@ -3,7 +3,7 @@
   <metadata>
     <id>OnionArch.Mvc</id>
     <title>OnionArch.Mvc</title>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
     <iconUrl>https://raw.githubusercontent.com/GaProgMan/OnionArch/master/onionArch-nuget-logo.png</iconUrl>
     <description>
       ASP.NET Core MVC using the onion architecture and feature folders
@@ -13,7 +13,10 @@
     </summary>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <authors>Jamie Taylor</authors>
-    <copyright>Copyright © Jamie Taylor 2018</copyright>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+    <copyright>Copyright Jamie Taylor 2018</copyright>
     <licenseUrl>https://raw.githubusercontent.com/GaProgMan/OnionArch/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/GaProgMan/OnionArch</projectUrl>
     <tags>Template, AspNet, Mvc, onion architecture, feature folders</tags>
