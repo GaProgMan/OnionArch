@@ -17,6 +17,10 @@ OnionArch has a Code of Conduct which all contributors, maintainers and forkers 
 
 See [Code of Conduct.md](Code-of-Conduct.md) for details.
 
+## Installing the Template
+
+To use the template locally, it will need to be installed. You can do this from either the NuGet package (see the next section) or by installing it from source. To install from source, please seen the [NuGetReadMe.md](NuGetReadme) file for instructions.
+
 ## NuGet Package
 
 This project is now available as a [NuGet package](https://www.nuget.org/packages/OnionArch.Mvc)
