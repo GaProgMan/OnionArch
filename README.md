@@ -54,11 +54,11 @@ Issue the following commands to set up the databases:
 
 Check for migrations in the `Onion.Repo.Identity` directory. If there isn't a directory labelled `Migrations`, then run the following (from the `Onion.Web`) directory to generate them:
 
-    dotnet ef migrations add CreateIdentitySchema -c AppIdentityDbContext -p ../Onion.Blog.Repo/Onion.Blog.Repo.csproj -s Onion.Blog.Web.csproj
+    dotnet ef migrations add CreateIdentitySchema -c AppIdentityDbContext -p ../Onion.Repo/Onion.Repo.csproj -s Onion.Web.csproj
 
 Similarly, check for migrations in the `Onion.Repo.Data` directory. If there isn't a directory labelled `Migrations`, then run the following (from the `Onion.Web`) directory to generate them:
 
-    dotnet ef migrations add InitialMigration -c DataContext -p ../Onion.Blog.Repo/Onion.Blog.Repo.csproj -s Onion.Blog.Web.csproj
+    dotnet ef migrations add InitialMigration -c DataContext -p ../Onion.Repo/Onion.Repo.csproj -s Onion.Web.csproj
 
 Apply all migrations to the databases by running the following commands (from the `Onion.Web` directory):
 
