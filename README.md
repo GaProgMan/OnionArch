@@ -71,7 +71,14 @@ Apply all migrations to the databases by running the following commands (from th
     dotnet ef database update -c DataContext -p ../Onion.Repo/Onion.Repo.csproj -s Onion.Web.csproj
     dotnet ef database update -c AppIdentityDbContext -p ../Onion.Repo/Onion.Repo.csproj -s Onion.Web.csproj
 
-3. Run the application and seed the database
+3. Build the front end
+
+Issue the following commands from the `Onion.Web` directory:
+
+    npm i
+    npm run build
+
+4. Run the application and seed the database
 
 Issue the following command from the `Onion.Web` directory:
 
